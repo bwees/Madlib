@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Madlib Generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <main>
+        <div style="padding-inline: 16px;">
+
+            <!-- put button inline with a h1 -->
+            <div class="d-flex justify-content-between">
+                <h1>Madlib Generator</h1>
+                <button class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;" id="reset" onclick="window.location.reload();">Reset</button>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="template">Enter your madlib template with a <code>@</code> for each word you would like to replace</label>
+                <input type="text" class="form-control" id="template" placeholder="My name is @.">
+                <button class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;" id="createWB">Create Wordbanks</button>
+            </div>
+
+            <div id="wb" hidden>
+                <hr>
+                <div class="scrolling-wrapper-flexbox" id="wb-scroll"></div>
+            </div>
+            
+            <!-- number input -->
+            <div class="form-group" hidden id="gen">
+                <hr>
+                <label for="numWords">Generate #</label>
+                <input type="number" class="form-control" id="numGen" style="width: 100px;" value="10">
+                <button class="btn btn-primary" style="margin-top: 8px; margin-bottom: 8px;" id="genButton">Generate Madlibs</button>
+                <textarea readonly name="textarea" class="form-control" style="height: 500px; margin-inline: 4px;" id="ta-gen"></textarea>
+            </div>
+
+        </div>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
